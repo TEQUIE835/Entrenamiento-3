@@ -111,6 +111,8 @@ while True:
                     prec= float(input("Ingrese un precio: "))
                     if prec>0:
                         break
+                    else:
+                        print("Ingrese un precio valido")
                 except ValueError: print("Ingrese un precio valido")
 
             #Agregar cantidad del producto
@@ -119,7 +121,10 @@ while True:
                     cant= int (input("Ingrese la cantidad de su producto: "))
                     if cant>0:
                         break
-                except: print("Ingrese una cantidad valida: ")
+                    else:
+                        print("Ingrese una cantidad valida")
+                except: 
+                    ("Ingrese una cantidad valida")
             inv = agregar(inv, nom, prec, cant)
         #Caso de buscar producto
         case 2:
@@ -140,6 +145,8 @@ while True:
                     precn = float(input("Ingrese el precio nuevo: "))
                     if precn>0:
                         break
+                    else:
+                        print("Ingrese un precio valido")
                 except ValueError:
                     print("\nIngrese un precio valido\n")
             actprec(inv, nom, precn)
@@ -154,6 +161,8 @@ while True:
                     cantn = int(input("Ingrese una cantidad: "))
                     if cantn>0:
                         break
+                    else:
+                        print("Ingrese una cantidad valida")
                 except ValueError:
                     print("\nIngrese una cantidad valida")
             actcant(inv, nom, cantn)
