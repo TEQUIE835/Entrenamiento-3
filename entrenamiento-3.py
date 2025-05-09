@@ -1,6 +1,9 @@
 import sys
 #definimos una funcion para agregar productos
 def agregar(inv, nom, prec, cant):
+    for prod in inv:
+        if prod["nombre"].lower().strip() == nom.lower().strip():
+            print(f"Producto {nom} esta en el inventario")
     inv.append({"nombre": nom, "precio": prec, "cantidad" : cant})
     print(f"\nEl producto '{nom}' ha sido agregado\n")
     return inv
